@@ -23,7 +23,7 @@
 
 'use strict';
 
-let numberOfFilms = prompt('Сколько фильмов вы уж епросмотрели?');
+const numberOfFilms = +prompt('Сколько фильмов вы уж епросмотрели?');
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -33,12 +33,12 @@ const personalMovieDB = {
     privat: false,
 };
 
-const movieTitle = prompt('Один из последних просмотренных фильмов?');
+const movieTitle = prompt('Один из последних просмотренных фильмов?'),
+      rate = prompt('На сколько оцените его?'),
+      movieTitle1 = prompt('Один из последних просмотренных фильмов?'),
+      rate1 = prompt('На сколько оцените его?');
 
-const rate = prompt('На сколько оцените его?');
+personalMovieDB.movies[movieTitle] = rate;
+personalMovieDB.movies[movieTitle1] = rate1;
 
-const movies = {};
-
-movies[movieTitle] = rate;
-
-console.log(movies);
+console.log(personalMovieDB)
